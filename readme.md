@@ -8,13 +8,13 @@ For now you can use it to guess words (akin to Wordle).
 
 - Run migrations (required for sessions):
 
-```python
+```sh
 python manage.py migrate
 ```
 
 - Run server normally:
 
-```python
+```sh
 python manage.py runserver
 ```
 
