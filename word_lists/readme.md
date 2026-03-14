@@ -23,7 +23,7 @@ Output can be found in:
 
 ## Adding new languages
 
-To add a new language, just add a new .txt file with the name of the language (say, french.txt) with the list of words you want and simply parse again.
+To add data for a new language, just add a new .txt file with the name of the language (say, french.txt) with the list of words you want and simply parse again.
 
 ## Attribution
 
