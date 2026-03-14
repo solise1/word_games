@@ -20,7 +20,7 @@ python manage.py runserver
 
 ## Todo:
 
-~~- Implement other languages (Spanish and German next)~~
+- ~~Implement other languages (Spanish and German next)~~
 - Make a proper layout linking to the language changer
 - Add translations for small snippets of text
 - Add a second game
