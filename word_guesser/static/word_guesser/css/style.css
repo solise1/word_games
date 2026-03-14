@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #121213;
+  color: #fff;
+  text-align: center;
+}
+.word_guesser {
+  display: inline-block;
+  margin-top: 40px;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+.cell {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #3a3a3c;
+  margin: 2px;
+  font-size: 2em;
+  text-transform: uppercase;
+  background: #121213;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cell.correct {
+  background: #538d4e;
+  border-color: #538d4e;
+}
+.cell.present {
+  background: #b59f3b;
+  border-color: #b59f3b;
+}
+.cell.absent {
+  background: #3a3a3c;
+  border-color: #3a3a3c;
+}
+input[type="text"] {
+  font-size: 1.2em;
+  padding: 5px;
+  margin-top: 20px;
+}
+button {
+  font-size: 1.2em;
+  padding: 5px 15px;
+  margin-left: 10px;
+}
