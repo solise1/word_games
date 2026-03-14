@@ -35,7 +35,7 @@ form.onsubmit = async function(e) {
     if (guess.length !== 5) return;
 
     // Send guess to backend
-    const response = await fetch('/guess/', {
+    const response = await fetch(guessUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ guess })

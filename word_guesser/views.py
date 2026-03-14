@@ -1,18 +1,20 @@
 import json
+from collections import Counter
 
 from django.shortcuts import render
 from django.http import JsonResponse
-from . import WordGuesser
+from django.utils.translation import get_language
 from django.views.decorators.csrf import csrf_exempt
-from collections import Counter
+from . import WordGuesser
+from word_games.settings import LANGUAGES
 
 
 MAX_GUESSES = 6
 
 def get_solution(request):
-    # ! Remove hardcoding of language and get locale or something
-    language = 'english'
-    # ! Remove hardcoding of language and get locale or something
+    language_code = get_language()
+    language = dict(LANGUAGES)[language_code].lower()
+
     solution = request.session.get('solution')
 
     if not solution:

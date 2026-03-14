@@ -11,7 +11,7 @@
 <body>
     <h1>Word Guesser</h1>
 
-    <form action="/" method="post" style="margin-bottom: 20px;">
+    <form action="{{ request.path }}" method="post" style="margin-bottom: 20px;">
         {% csrf_token %}
         <button type="submit" style="font-size:1em; padding:5px 20px;">New Game</button>
     </form>
@@ -19,7 +19,7 @@
     <div class="word_guesser" id="board"></div>
 
     <form id="guess-form" method="post" autocomplete="off">
-        <input type="text" id="guess-input" maxlength="5" minlength="5" required pattern="[A-Za-z]{5}" autofocus>
+        <input type="text" id="guess-input" maxlength="5" minlength="5" required pattern="[\p{L}]{5}" autofocus>
         <button type="submit">Guess</button>
     </form>
 
@@ -30,6 +30,8 @@
     {# Context variables #}
     <script>
       const maxGuesses = {{ max_guesses }};
+      const guessUrl = "{% url 'guess' %}";
+      console.log(guessUrl)
     </script>
 
     <script src="{% static 'word_guesser/js/word_guesser.js' %}"></script>
